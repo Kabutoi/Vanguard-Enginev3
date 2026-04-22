@@ -286,7 +286,7 @@ impl VanguardRenderer {
             width, height, box_texture, box_sampler,
             frame_times: std::collections::VecDeque::with_capacity(1001),
             g_buffer_texture, prev_g_buffer_texture, denoise_texture_a, denoise_texture_b, denoise_pipeline, denoise_bind_groups, denoise_bind_group_a, denoise_bind_group_b, denoise_param_buffers,
-            spp: 1, bounces: 3, denoise_radius: 15,
+            spp: 23, bounces: 3, denoise_radius: 15,
             prev_camera_rot: [0.0; 16], prev_player_pos: [0.0; 4],
             compute_bind_group_layout, denoise_bind_group_layout: denoise_layout,
             blit_bind_group_layout, box_view, blit_sampler,
@@ -539,8 +539,8 @@ impl VanguardRenderer {
                         ui.add(egui::Slider::new(&mut self.spp, 1..=64).text("Rays/Pixel").text_color(egui::Color32::WHITE));
                         ui.add(egui::Slider::new(&mut self.bounces, 1..=8).text("Bounces"));
                         ui.add(egui::Slider::new(&mut self.denoise_radius, 1..=20).text("Denoise Radius"));
-                        ui.add(egui::Slider::new(&mut self.sharpness, 0.0..=1.0).text("DLSS 4.5 (Sharpening)"));
-                        ui.add(egui::Slider::new(&mut self.render_scale, 0.25..=1.0).text("DLSS Quality (Render Scale)"));
+                        ui.add(egui::Slider::new(&mut self.sharpness, 0.0..=1.0).text("VLSS 4.5 (Sharpening)"));
+                        ui.add(egui::Slider::new(&mut self.render_scale, 0.25..=1.0).text("VLSS Quality (Render Scale)"));
                         ui.add(egui::Slider::new(&mut self.room_width, 0.1..=100000.0).logarithmic(true).text("Room Width"));
                         ui.add(egui::Slider::new(&mut self.room_height, 0.1..=100000.0).logarithmic(true).text("Room Height"));
                         ui.add(egui::Slider::new(&mut self.room_depth, 0.1..=100000.0).logarithmic(true).text("Room Depth"));
