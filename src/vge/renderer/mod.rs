@@ -538,7 +538,6 @@ impl VanguardRenderer {
                         ui.label(egui::RichText::new(format!("0.1% LOW: {:.1}", low_01)).color(egui::Color32::RED).size(14.0).strong());
                         ui.add(egui::Slider::new(&mut self.spp, 1..=64).text("Rays/Pixel").text_color(egui::Color32::WHITE));
                         ui.add(egui::Slider::new(&mut self.bounces, 1..=8).text("Bounces"));
-                        ui.add(egui::Slider::new(&mut self.denoise_radius, 1..=20).text("Denoise Radius"));
                         ui.add(egui::Slider::new(&mut self.sharpness, 0.0..=1.0).text("VLSS 4.5 (Sharpening)"));
                         ui.add(egui::Slider::new(&mut self.render_scale, 0.25..=1.0).text("VLSS Quality (Render Scale)"));
                         ui.add(egui::Slider::new(&mut self.room_width, 0.1..=100000.0).logarithmic(true).text("Room Width"));
