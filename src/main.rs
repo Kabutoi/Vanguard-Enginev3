@@ -1,6 +1,6 @@
-mod anker_breaker;
+mod vge;
 
-use anker_breaker::renderer::VanguardRenderer;
+use vge::renderer::VanguardRenderer;
 use std::sync::Arc;
 use tokio::runtime::Runtime;
 use tracing::{info, Level};
