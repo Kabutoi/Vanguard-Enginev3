@@ -1,8 +1,11 @@
 /target
 /vanguard_engine_v3.exe
 /vanguard_engine_v3_standalone.exe
-/*.png
-/*.jpg
+# Allowed for embedding: psx_snow_cube.png
+/vanguard_screenshot.png
+/verification_frame_100.png
+/verification_frame_200.png
+/verification_frame_500.png
 /*.img
 .DS_Store
 **/*.rs.bk
