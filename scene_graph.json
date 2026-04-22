@@ -1,0 +1,71 @@
+{
+  "project_name": "Vanguard Engine v3",
+  "anchors": {
+    "_MANAGEMENT": {
+      "description": "Singletons, GameManagers, AppState",
+      "nodes": []
+    },
+    "_SYSTEMS": {
+      "description": "Physics logic, generic gameplay loops, networking",
+      "nodes": [
+        {
+          "name": "TaskGraphManager",
+          "type": "System",
+          "properties": {
+            "threads": 16
+          }
+        }
+      ]
+    },
+    "_PLAYER": {
+      "description": "Local/Network player clones, cameras, HUD logic",
+      "nodes": [
+        {
+          "name": "Vanguard_Player_01",
+          "type": "Humanoid",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "state": "prone",
+          "components": [
+            "IK_Solver",
+            "Prone_Controller"
+          ]
+        }
+      ]
+    },
+    "_ENVIRONMENT": {
+      "description": "Static geo, world-root, terrain, procedural dunes",
+      "nodes": [
+        {
+          "name": "Voxelized_Grid_Root",
+          "type": "Grid",
+          "properties": {
+            "cell_size": 10000,
+            "dimensions": [
+              10099,
+              10999,
+              10099
+            ]
+          }
+        }
+      ]
+    },
+    "_LIGHTING": {
+      "description": "Directional lights, Volume Profiles, Reflection Probes",
+      "nodes": []
+    },
+    "_UI": {
+      "description": "Canvas roots, EventSystems, main menus",
+      "nodes": [
+        {
+          "name": "Tactical_HUD",
+          "type": "WebUI",
+          "src": "index.html"
+        }
+      ]
+    }
+  }
+}

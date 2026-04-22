@@ -1,0 +1,12 @@
+/target
+/vanguard_engine_v3.exe
+/vanguard_engine_v3_standalone.exe
+/*.png
+/*.jpg
+/*.img
+.DS_Store
+**/*.rs.bk
+Cargo.lock
+.agents/
+agents/
+scripts/
